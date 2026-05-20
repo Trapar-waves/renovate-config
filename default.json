@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Trapar-waves template repos — shared Renovate preset",
+  "extends": ["config:best-practices"],
+  "rangeStrategy": "bump",
+  "minimumReleaseAge": "1 day",
+  "internalChecksFilter": "strict",
+  "packageRules": [
+    {
+      "description": "Group React runtime and types",
+      "groupName": "react",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+      ]
+    },
+    {
+      "description": "Group Rsbuild toolchain",
+      "groupName": "rsbuild",
+      "matchPackageNames": ["/@rsbuild/*/", "/@rsdoctor/*/"]
+    },
+    {
+      "description": "Group internal Trapar-waves packages",
+      "groupName": "trapar-waves templates",
+      "matchPackageNames": ["/@trapar-waves/*/"]
+    },
+    {
+      "description": "Require dashboard approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    }
+  ]
+}
