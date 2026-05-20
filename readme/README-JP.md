@@ -16,7 +16,7 @@
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>Trapar-waves/renovate-config"]
+  "extends": ["github>Trapar-waves/renovate-config"]
 }
 ```
 
