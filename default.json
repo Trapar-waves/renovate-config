@@ -2,7 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Trapar-waves template repos — shared Renovate preset",
   "extends": ["config:best-practices"],
-  "ignorePresets": [":pinDevDependencies",":pinDigest"],
+  "ignorePresets": [
+    ":pinDevDependencies",
+    "helpers:pinGitHubActionDigests",
+    "docker:pinDigests"
+  ],
   "rangeStrategy": "bump",
   "minimumReleaseAge": "1 day",
   "internalChecksFilter": "strict",
