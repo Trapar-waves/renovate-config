@@ -1,10 +1,17 @@
-# Trapar-waves Renovate 共享配置
+# Trapar-waves Renovate Config
 
-本仓库为 [Trapar-waves](https://github.com/Trapar-waves) 组织下模板项目的 **Renovate preset**，单一来源维护依赖更新策略。
+![GitHub last commit](https://img.shields.io/github/last-commit/Trapar-waves/renovate-config)
+![Renovate](https://img.shields.io/badge/renovate-enabled-blue)
 
-## 使用方式
+---
 
-在各模板仓库的 `renovate.json` 中：
+[中文](./readme/README-CN.md) | [日本語](./readme/README-JP.md) | [Русский язык](./readme/README-RU.md)
+
+> Organization-wide Renovate preset for [Trapar-waves](https://github.com/Trapar-waves) template repositories—a single source of truth for dependency update policies.
+
+## Usage
+
+In each template repository’s `renovate.json`:
 
 ```json
 {
@@ -13,27 +20,27 @@
 }
 ```
 
-Renovate 会加载本仓库根目录的 [`default.json`](./default.json)。
+Renovate loads [`default.json`](./default.json) from the root of this repository.
 
-## 策略摘要
+## Policy summary
 
-- 基于 `config:best-practices`（Actions digest、每周 lockfile 维护等）
-- `minimumReleaseAge`: 1 天，`internalChecksFilter`: strict
+- Based on `config:best-practices` (Actions digest pinning, weekly lockfile maintenance, and more)
+- `minimumReleaseAge`: 1 day, `internalChecksFilter`: strict
 - `rangeStrategy`: bump
-- 分组：React、Rsbuild、`@trapar-waves/*`
-- Major 更新需在 Dependency Dashboard 中审批后才会开 PR
+- Grouped updates: React, Rsbuild, `@trapar-waves/*`
+- Major updates require approval in the Dependency Dashboard before a PR is opened
 
-## 本地校验
+## Local validation
 
 ```bash
 npx --yes -p renovate renovate-config-validator default.json
 ```
 
-## 注意事项
+## Notes
 
-- `minimumReleaseAge` 对 lock file maintenance 类更新支持有限，详见 [Renovate 文档](https://docs.renovatebot.com/key-concepts/minimum-release-age)。
-- 修改 `default.json` 合并到 `main` 后，所有 `extends` 本 preset 的仓库会在下一轮 Renovate 运行中生效。
+- `minimumReleaseAge` has limited support for lock file maintenance updates; see the [Renovate documentation](https://docs.renovatebot.com/key-concepts/minimum-release-age).
+- After changes to `default.json` are merged into `main`, repositories that extend this preset pick them up on the next Renovate run.
 
-## 版本
+## Versioning
 
-可选通过 tag 钉版本，例如：`github>Trapar-waves/renovate-config#v1.0.0`。
+You can pin a release tag, for example: `github>Trapar-waves/renovate-config#v1.0.0`.
