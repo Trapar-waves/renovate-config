@@ -9,6 +9,7 @@
   ],
   "rangeStrategy": "bump",
   "minimumReleaseAge": "1 day",
+  "internalChecksAsSuccess":true,
   "packageRules": [
     {
       "description": "Group React runtime and types",
