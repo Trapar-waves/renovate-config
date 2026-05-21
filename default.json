@@ -5,11 +5,12 @@
   "ignorePresets": [
     ":pinDevDependencies",
     "helpers:pinGitHubActionDigests",
-    "docker:pinDigests"
+    "docker:pinDigests",
+    "security:minimumReleaseAgeNpm"
   ],
   "rangeStrategy": "bump",
   "minimumReleaseAge": "1 day",
-  "internalChecksAsSuccess":true,
+  "internalChecksFilter": "flexible",
   "packageRules": [
     {
       "description": "Group React runtime and types",
