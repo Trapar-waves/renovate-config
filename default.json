@@ -9,7 +9,6 @@
   ],
   "rangeStrategy": "bump",
   "minimumReleaseAge": "1 day",
-  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "description": "Group React runtime and types",
@@ -30,11 +29,6 @@
       "description": "Group internal Trapar-waves packages",
       "groupName": "trapar-waves templates",
       "matchPackageNames": ["/@trapar-waves/*/"]
-    },
-    {
-      "description": "Require dashboard approval for major updates",
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
     }
   ]
 }
